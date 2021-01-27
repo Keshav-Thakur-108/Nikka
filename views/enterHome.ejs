@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/enterHome.css">
     <title>Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"
+        integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw=="
+        crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Enter home</h1>
+    <div class="svg"></div>
+    <div class="formDiv">
+        <form>
+            <input name="username" type="text" placeholder="Enter your name" class="username" />
+        </form>
+    </div>
+    <script>
+
+        const anims = [
+            "https://assets8.lottiefiles.com/datafiles/40aX5db74VvGPWw/data.json",
+            "https://assets3.lottiefiles.com/packages/lf20_utsfwa3k.json",
+            "https://assets2.lottiefiles.com/private_files/lf30_Y7PQoU.json",
+            "https://assets3.lottiefiles.com/private_files/lf30_d3c6cL.json",
+            "https://assets9.lottiefiles.com/packages/lf20_tr1pjkop.json",
+            "https://assets6.lottiefiles.com/packages/lf20_AFxMN8.json"
+        ]
+
+        let index = Math.round(Math.random() * 5) 
+        const svgContainer = document.querySelector('.svg')
+        const form = document.querySelector('form')
+        const username = document.querySelector('.username')
+
+        const animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: true,
+            autoplay: true,
+            path: anims[index]
+        })
+
+        animItem.goToAndPlay(0, true);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.cookie = `name=${username.value}`;
+            window.location.reload()
+        })
+    </script>
 </body>
+
+
 </html>
