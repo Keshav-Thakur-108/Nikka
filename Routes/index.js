@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
     if(req.cookies.name == undefined)
     res.render('enterHome')
     else 
-    res.send("HELLO")
+    res.render('home')
     
 })
 
