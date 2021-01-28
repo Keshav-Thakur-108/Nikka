@@ -55,3 +55,133 @@ nav {
   text-decoration: none;
   color: white;
 }
+
+.urlSection {
+  background-color: #e27d5f;
+  margin: 160px auto 20px auto;
+  max-width: 100%;
+  box-shadow: 0 1px 4px #ccc;
+  border-radius: 2px;
+  padding: 50px 30px 5px;
+  text-align: center;
+}
+
+.shorten-input {
+  width: 72%;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #d3d4d7;
+  border-radius: 8px 8px 8px 8px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #36383b;
+  padding: 0 20px;
+}
+
+.firstSec {
+  padding: 15px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.firstSec h1 {
+  margin-top: 24px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.firstSec p {
+  padding: 30px 100px;
+  color: #56575b;
+  font-size: 24px;
+  text-align: left;
+}
+
+.urlForm {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.urlSection h4 {
+  margin: 16px 0;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.url-button {
+  height: 60px;
+  width: 200px;
+  background: #27ae60;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
+}
+.url-button:hover,
+.url-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #024d21;
+}
+
+.cardSec {
+  padding: 50px 30px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.card {
+  font-family: "Ubuntu", sans-serif;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+  width: 280px;
+  height: 325px;
+  border-radius: 4px;
+}
+
+.card img {
+  margin-top: 24px;
+  height: 72px;
+}
+
+.card h1 {
+  margin-top: 24px;
+  font-size: 28px;
+}
+
+.card p {
+  color: #56575b;
+  margin-top: 32px;
+  font-size: 18px;
+}
+
+footer {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
+  background-color: #e27d5f;
+
+  text-align: center;
+}
