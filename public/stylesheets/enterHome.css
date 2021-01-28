@@ -5,9 +5,41 @@ body {
 .svg {
   position: absolute;
   width: 500px;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -50%);
+}
+
+.fadeInLeft {
+  animation: fadeInLeft ease-out 1s;
+}
+
+.fadeInRight {
+  animation: fadeInRight ease-out 1s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
 }
 
 .username {
@@ -24,9 +56,18 @@ body {
   font-size: 14px;
 }
 
-.formDiv {
+.formContainer {
   position: absolute;
-  top: 65%;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+#heading {
+  font-family: "Karma", serif;
+  font-size: 48px;
+  position: absolute;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, 50%);
 }
