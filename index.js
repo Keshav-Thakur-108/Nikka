@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser")
 const config = require('./config/config')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const randomString = require('randomString')
 
 
 app.set('view engine', 'ejs')
