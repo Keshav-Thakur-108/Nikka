@@ -71,10 +71,8 @@ router.post('/sendMail', (req, res) => {
     })
 })
 
-router.get("/*", function (req, res, next) {
-    var query = req.params[0];
-    console.log(query);
-    next(); //you need add next, otherwise your query will hang there
+router.get('/favicon.ico', (req,res)=>{
+ return 'your faveicon'
 })
 
 router.get('/:id', (req, res) => {
