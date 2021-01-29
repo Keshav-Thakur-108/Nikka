@@ -37,6 +37,15 @@ nav {
   cursor: pointer;
 }
 
+.logo a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.logo a:focus {
+  color: white;
+}
+
 .list {
   display: flex;
   flex-direction: row;

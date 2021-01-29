@@ -185,3 +185,12 @@ footer {
 
   text-align: center;
 }
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo a:focus {
+  color: white;
+}
