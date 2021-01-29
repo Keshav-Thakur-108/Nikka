@@ -1,5 +1,5 @@
-const nodemailer = require("nodemailer"),
-    mailGun = require("nodemailer-mailgun-transport");
+const nodemailer = require("nodemailer")
+const mailGun = require("nodemailer-mailgun-transport");
 
 const auth = {
     auth: {
