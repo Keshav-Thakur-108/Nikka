@@ -40,16 +40,7 @@ router.post('/shorten-url', (req, res) => {
 
 
 
-router.get('/:id', (req, res) => {
-    console.log(req.params.id)
-    Url.findOne({slug: req.params.id}, (err, foundUrl) => {
-        console.log("Found Url", foundUrl)
-        if(err)
-        console.log(err)
-        else res.redirect(foundUrl.webUrl)
-        
-    })
-})
+
 
 router.post('/sendMail', (req, res) => {
     const output =
@@ -78,5 +69,15 @@ router.post('/sendMail', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    console.log("params slug id",req.params.id)
+    Url.findOne({slug: req.params.id}, (err, foundUrl) => {
+        console.log("Found Url", foundUrl)
+        if(err)
+        console.log(err)
+        else res.redirect(foundUrl.webUrl)
+        
+    })
+})
 
 module.exports = router
