@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e27d5f;
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-start;
+  font-size: 40px;
+  font-family: "Amita", cursive;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+}
+
+.listItem {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+}
+
+.listItem a {
+  text-decoration: none;
+  color: white;
+}
+
+.urlSection {
+  background-color: #e27d5f;
+  margin: 100px auto 20px auto;
+  max-width: 100%;
+  box-shadow: 0 1px 4px #ccc;
+  border-radius: 2px;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.shorten-input {
+  width: 72%;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #d3d4d7;
+  border-radius: 8px 8px 8px 8px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #36383b;
+  padding: 0 20px;
+}
+
+.urlForm {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.urlSection h4 {
+  text-align: left;
+  margin: 16px 0;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.url-button {
+  height: 60px;
+  width: 200px;
+  background: #27ae60;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 30px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
+}
+.url-button:hover,
+.url-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #024d21;
+}
+
+footer {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
+  background-color: #e27d5f;
+  text-align: center;
+}
+
+.firstDiv {
+  font-family: "Source Sans Pro", sans-serif;
+  padding-top: 20px;
+}
+
+.firstDiv h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 72px;
+  font-weight: normal;
+}
+
+.firstDiv p {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  color: #56575b;
+  margin-top: 50px;
+}
+
+.firstSec {
+  padding: 0 20px;
+}

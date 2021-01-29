@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/shortUrl.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="navContainer">
+            <div class="logo">
+                निक्का
+            </div>
+            <ul class="list">
+                <li class="listItem">
+                    <a href="/about">About</a>
+                </li>
+                <li class="listItem">
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="firstSec">
+<div class="firstDiv">
+    <h1>Thank you for using Nikka</h1>
+    <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+</div>
+<section class="urlSection">
+
+    <div class="urlForm">
+        <input id="shorten_url" class="shorten-input" autocomplete="off" name="url" type="url" value="http://localhost:3000/<%=slug%>"
+            placeholder="">
+        <button class="url-button">Click to Copy</button>
+    </div>
+    <h4>Full URL: <a href="<%=fullUrl%>"><%=fullUrl%></a></h4>
+</section>
+    </section>
+    
+    <footer>
+        NIKKA © 2021
+    </footer>
+
+    <script>
+        const button = document.querySelector('.url-button')
+        const input = document.querySelector('.shorten-input')
+        button.addEventListener('click', (e) => {
+            
+            input.select();
+            input.setSelectionRange(0, 99999);
+            document.execCommand('copy')
+            button.textContent = 'Copied'
+        })
+    </script>
+</body>
+</html>
