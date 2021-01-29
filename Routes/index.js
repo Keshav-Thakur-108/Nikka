@@ -4,11 +4,7 @@ const Url = require('../models/Url')
 const randomString = require('randomstring')
 const sendmail = require("../mail");
 
-router.get("/*", function (req, res, next) {
-    var query = req.params[0];
-    console.log(query);
-    next(); 
-})
+
 
 router.get('/', (req, res) => {
     if(req.cookies.name == undefined)
@@ -73,6 +69,12 @@ router.post('/sendMail', (req, res) => {
 
 
     })
+})
+
+router.get("/*", function (req, res, next) {
+    var query = req.params[0];
+    console.log(query);
+    next(); //you need add next, otherwise your query will hang there
 })
 
 router.get('/:id', (req, res) => {
