@@ -148,3 +148,12 @@ footer {
 .firstSec {
   padding: 0 20px;
 }
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo a:focus {
+  color: white;
+}

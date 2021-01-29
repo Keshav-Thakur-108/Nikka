@@ -60,7 +60,8 @@ router.post('/sendMail', (req, res) => {
 
     sendmail(output, function (err, data) {
         if (err) {
-            return res.status(500).json({ message: err.message || 'Internal Error' });
+           console.log(err)
+           res.redirect("/");
         }
 
         else {
