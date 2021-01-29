@@ -1,0 +1,173 @@
+body {
+  /* Typography Declaration */
+  padding: 0;
+  margin: 0;
+  color: #222222;
+  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e27d5f;
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-start;
+  font-size: 40px;
+  font-family: "Amita", cursive;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+}
+
+.listItem {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+}
+
+.listItem a {
+  text-decoration: none;
+  color: white;
+}
+
+.masthead-heading,
+.masthead-intro,
+.content-footer {
+  text-align: center;
+}
+
+.masthead {
+  padding: 11em 0;
+  background-image: url("https://www.dzinewatch.com/wp-content/uploads/2012/03/Cool-Graphic-Art-by-Field-03.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.masthead-intro {
+  /* Text Declarations */
+  margin-bottom: 0.1em;
+  font-family: "Gentium Book Basic," Georgia, serif;
+  font-size: 4em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.masthead-heading {
+  /*Layout Declarations */
+  margin-top: -0.2em;
+  /* Typography Declarations */
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: light;
+  font-size: 1.5em;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: black;
+}
+
+/* Text Declarations for Sections */
+
+.introduction-section > p,
+.location-section > p,
+.content-footer > p,
+.questions-section > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Section Styling */
+
+.introduction-section,
+.location-section,
+.questions-section {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.questions-section > h2 {
+  /*Typography Declarations */
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.1 em;
+  font-weight: bold;
+  color: #222222;
+}
+
+/* Footer Styling */
+
+.fa-stack fa-lg {
+  display: inline-block;
+}
+
+.footer-container > p {
+  color: white;
+}
+
+.content-footer {
+  padding: 2em 0;
+  margin-top: 3em;
+  background: #2b3840;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:link {
+  color: #b69760;
+}
+
+a:visited {
+  color: #b69760;
+}
+
+@media only screen and (max-width: 571px) {
+  .masthead {
+    padding: 5em 0;
+  }
+  .masthead-intro {
+    font-size: 3em;
+  }
+  .masthead-heading {
+    font-size: 0.5em;
+  }
+  .container {
+    padding: 0 3em;
+  }
+  .footer-container {
+    padding: 0 3em;
+  }
+}

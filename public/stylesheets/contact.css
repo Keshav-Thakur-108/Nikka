@@ -44,7 +44,7 @@ nav {
 }
 
 .listItem {
-  color: white;
+  color: white !important;
   font-family: "Roboto Mono", monospace;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ nav {
 
 .listItem a {
   text-decoration: none;
-  color: white;
+  color: white !important;
 }
 
 body {
