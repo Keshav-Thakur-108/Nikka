@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const Url = require('../models/Url')
-const randomString = require('randomString')
+const randomString = require('randomstring')
 const sendmail = require("../mail");
 
 router.get('/', (req, res) => {
