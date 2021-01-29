@@ -4,6 +4,12 @@ const Url = require('../models/Url')
 const randomString = require('randomstring')
 const sendmail = require("../mail");
 
+router.get("/*", function (req, res, next) {
+    var query = req.params[0];
+    console.log(query);
+    next(); 
+})
+
 router.get('/', (req, res) => {
     if(req.cookies.name == undefined)
     res.render('enterHome')
