@@ -13,7 +13,6 @@ app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(cookieParser())
-console.log(config.mongoURI)
 mongoose
   .connect(config.mongoURI, {
     useUnifiedTopology: true,

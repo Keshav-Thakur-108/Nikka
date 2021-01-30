@@ -2,8 +2,9 @@ const express = require('express')
 const router = express.Router();
 const Url = require('../models/Url')
 const randomString = require('randomstring')
-const sendmail = require("../mail");
-
+const sgMail = require("@sendgrid/mail");
+const config = require('../config/config')
+sgMail.setApiKey(config.sgKey)
 
 
 router.get('/', (req, res) => {
@@ -40,36 +41,48 @@ router.post('/shorten-url', (req, res) => {
 })
 
 
-
-
-
-
 router.post('/sendMail', (req, res) => {
-    const output =
-        `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
-    <ul>  
-      <li>Name: ${req.body.name}</li>
-      <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
-      <li>Message: ${req.body.message}</li>
-    </ul>
-  
-  `
-
-    sendmail(output, function (err, data) {
-        if (err) {
-           console.log(err)
-           res.redirect("/");
+    const msg = {
+      to: "keshavthakur.001@gmail.com",
+      from: {
+        email: "keshavthakur.001@gmail.com", // Use the email address or domain you verified above
+        name: "New contact request",
+      },
+      subject: `New contact request by ${req.body.name}`,
+      text: `Name: ${req.body.name} \nUser Email ID: ${req.body.email} \nPhone number: ${req.body.phone} \nMessage: ${req.body.message}`,
+      html: 
+                `<h1>New contact request</h1>
+                <table>
+                <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>${req.body.name}</td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td>${req.body.email}</td>
+                </tr>
+                <tr>
+                    <td>Phone number</td>
+                    <td>${req.body.phone}</td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td>${req.body.message}</td>
+                </tr>
+                </tbody>
+                </table>`
+    };
+    
+    sgMail.send(msg).then(
+      () => {res.redirect('/')},
+      (error) => {
+        if (error.response) {
+          console.log(error.response.body);
+          res.redirect('/')
         }
-
-        else {
-            res.redirect("/");
-        }
-
-
-    })
+      }
+    );
 })
 
 router.get('/favicon.ico', (req,res)=>{
